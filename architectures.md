@@ -27,15 +27,22 @@ Design principles are guiding rules and concepts that inform the process of desi
 Applying design principles such as modularity, separation of concerns, abstraction,
 and encapsulation to create a scalable and maintainable system.
 - Separation of Concerns
-- Single Responsibility Principle (SRP): Each class or module should have only one reason to change. It emphasizes that a class should have a single responsibility or purpose, making  it easier to understand, maintain, and test.
+- Command Query Separation (CQS)
+- Inversion of Control
+- Orthogonality: Things that are not related conceptually should not be related in the system
+- Murphy's Law:  a universal law that when there is even the smallest possibility of something going wrong, it eventually will go wrong
+- Maximise Cohesion: Since higher cohesion is better, group all related functionalities sharing a single responsibility (e.g. in a class)
+- Single Responsibility Principle (SRP): Each class or module should have only one reason to change. It emphasizes that a class should have a single responsibility or purpose,   making  it easier to understand, maintain, and test.
 - Open/Closed Principle (OCP)
 - Liskov Substitution Principle (LSP)
+- Composition Over Inheritance: Using inheritance, subclasses easily make assumptions, and break LSP.
 - Interface Segregation Principle (ISP)
 - Dependency Inversion Principle (DIP)
 - Don't Repeat Yourself (DRY)
 - Keep It Simple, Stupid (KISS
 - Composition over Inheritance
 - Law of Demeter (LoD)
+- Avoid Premature Optimization: It is unknown upfront where the bottlenecks will be.After optimization, it might be harder to read and thus maintain
 
 # Architectural Patterns
 Architectural patterns provide a high-level design framework for organizing and structuring software systems.
