@@ -1,80 +1,85 @@
-### Architecture
-The web app architecture of a system describes its major components, their relationships, and how they interact with each other.
+# Design Patterns
+https://refactoring.guru/design-patterns
 
-- Client Server architecture (Client -> Server -> Database)
-- Peer to Peer Architecture (No need for central server)
-- Monolothic Architecture (Not scalable, not reliable, with single point of failure.)
-- Webservice Architecture
-- Serverless Architecture (aka Function as a service. Functions are hosted by a thirdpart e.g aws lambda functions, azure functions, firebase cloud functions e.t.c)
+Design patterns are typical solutions to commonly occurring problems in software design. They are like pre-made blueprints that you can customize to solve a recurring design problem in your code.
 
-### Design Patterns
+## Classification of Design Patters
+**Creational patterns**: provide object creation mechanisms that increase flexibility and reuse of existing code.
+- Factory
+- Abstract Factory
+- Builder
+- Singleton
 
-# Highly available and fault tolerant
-# Security
+**Structural patterns**: explain how to assemble objects and classes into larger structures, while keeping these structures flexible and efficient.
+- Adapter
+- Decorator
+- Facade
+- Bridge
+- Composite
+- Proxy
+- Flyweight
 
-# Caching and Optimisation
+**Behavioral patterns**: take care of effective communication and the assignment of responsibilities between objects.
+- Chain of Responsibiity
+- Command
+- Iterator
+- Mediator
+- Memento
+- State
+- Observer
+- Stratergy
+- Template Method
+- Visitor
 
-# Message Queues and task schedulers
+## Examples of Design patterns
+https://refactoring.guru/design-patterns/python
 
+Try and understand problems solved by specific patterns, so that you will know when to apply them.
 
+**Creational Patterns**
 
-### Database
-- Indexing
-- Consistency
-- Replication
-- Sharding (horizontal and vertical)
+Abstract Factory
 
-# Scalable and fault tolerant database architecture to ensure high availability and data consistency
+Builder
 
+Factory Method
 
-# CDN
-# DFS e.g S3
+Prototype
 
-# 1. Scalability
-Vertical scaling
-Horizontal scaling
-Load Balancing
-Caching
-Sharding
-Replication
-Microservices
+Singleton
 
-# 2. Availability
-Redundancy
-Load balancing
-Fault tolerance
-Disaster Recovery
-Monitoring
+**Structural Patterns**
+Adapter
 
-# 3. Reliability
-Everything under availability and;
-Failover mechanisms
-Automated testing
+Bridge
 
-# # 4. Security
-Authentication and Authorisation
-Encryption
-Access Controls
-Input Validation
-Auditing and Logging
-Security Testing (Penetration testing and Vulnerability testing)
+Composite
 
-# 5. Performance
-Caching 
-load balancing
-scaling
-compression
-indexing
-query optimisation
-caching at client side
+Decorator
 
-6. Maintainability
-Modular design and coding standards
+Facade
 
+Flyweight
 
-7. Extensibility
-8. Const
-Deployment
-Technology Stuck
+Proxy
 
+**Behavioral Patterns**
+Chain of Responsibility
 
+Iterator
+
+Memento
+
+State
+
+Template Method
+
+Command
+
+Mediator
+
+Observer
+
+Strategy
+
+Visitor

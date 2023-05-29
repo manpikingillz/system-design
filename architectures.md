@@ -1,4 +1,24 @@
 
+Difference between Low Level Design (LLD) and High Level Design (HLD)
+
+# Architecture
+The web app architecture of a system describes its major components, their relationships, and how they interact with each other.
+
+- Client Server architecture (Client -> Server -> Database)
+- Peer to Peer Architecture (No need for central server)
+- Monolothic Architecture (Not scalable, not reliable, with single point of failure.)
+- Webservice Architecture
+- Serverless Architecture (aka Function as a service. Functions are hosted by a thirdpart e.g aws lambda functions, azure functions, firebase cloud functions e.t.c)
+
+
+# Software Architecture styles
+- Data-centered architectures
+- Data-flow architectures
+- Call and return architectures
+- Object-oriented architectures
+- Layered architectures
+
+-----------------------------
 # System Requirements
 Functional and non-functional requirements
 
