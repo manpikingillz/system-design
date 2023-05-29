@@ -49,10 +49,16 @@ Architectural patterns provide a high-level design framework for organizing and 
 They define the overall structure, behavior, and interaction between major components of a system.
 
 - Master-slave architecture
+![image](https://github.com/manpikingillz/system-design/assets/8900510/94f2b48e-f86d-4a2c-bc7f-8e5633037ee5)
+
 - Shared-nothing architecture
 
 - Layered Architecture
+![image](https://github.com/manpikingillz/system-design/assets/8900510/caa7df9b-ec9d-4c5c-8749-cd524b2e4400)
+
 - Client-Server Architecture
+![image](https://github.com/manpikingillz/system-design/assets/8900510/24aaad1e-a486-4fa5-bdad-604eec06de93)
+
 - Microservices Architecture (https://microservices.io/)
 - Event-Driven Architecture
 - Service-Oriented Architecture (SOA)
