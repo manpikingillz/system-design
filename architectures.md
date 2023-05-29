@@ -27,25 +27,38 @@ Design principles are guiding rules and concepts that inform the process of desi
 Applying design principles such as modularity, separation of concerns, abstraction,
 and encapsulation to create a scalable and maintainable system.
 - Separation of Concerns
-- Single Responsibility Principle (SRP): Each class or module should have only one reason to change. It emphasizes that a class should have a single responsibility or purpose, making  it easier to understand, maintain, and test.
+- Command Query Separation (CQS)
+- Inversion of Control
+- Orthogonality: Things that are not related conceptually should not be related in the system
+- Murphy's Law:  a universal law that when there is even the smallest possibility of something going wrong, it eventually will go wrong
+- Maximise Cohesion: Since higher cohesion is better, group all related functionalities sharing a single responsibility (e.g. in a class)
+- Single Responsibility Principle (SRP): Each class or module should have only one reason to change. It emphasizes that a class should have a single responsibility or purpose,   making  it easier to understand, maintain, and test.
 - Open/Closed Principle (OCP)
 - Liskov Substitution Principle (LSP)
+- Composition Over Inheritance: Using inheritance, subclasses easily make assumptions, and break LSP.
 - Interface Segregation Principle (ISP)
 - Dependency Inversion Principle (DIP)
 - Don't Repeat Yourself (DRY)
 - Keep It Simple, Stupid (KISS
 - Composition over Inheritance
 - Law of Demeter (LoD)
+- Avoid Premature Optimization: It is unknown upfront where the bottlenecks will be.After optimization, it might be harder to read and thus maintain
 
 # Architectural Patterns
 Architectural patterns provide a high-level design framework for organizing and structuring software systems.
 They define the overall structure, behavior, and interaction between major components of a system.
 
 - Master-slave architecture
+![image](https://github.com/manpikingillz/system-design/assets/8900510/94f2b48e-f86d-4a2c-bc7f-8e5633037ee5)
+
 - Shared-nothing architecture
 
 - Layered Architecture
+![image](https://github.com/manpikingillz/system-design/assets/8900510/caa7df9b-ec9d-4c5c-8749-cd524b2e4400)
+
 - Client-Server Architecture
+![image](https://github.com/manpikingillz/system-design/assets/8900510/24aaad1e-a486-4fa5-bdad-604eec06de93)
+
 - Microservices Architecture (https://microservices.io/)
 - Event-Driven Architecture
 - Service-Oriented Architecture (SOA)
