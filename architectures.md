@@ -46,7 +46,7 @@ They define the overall structure, behavior, and interaction between major compo
 
 - Layered Architecture
 - Client-Server Architecture
-- Microservices Architecture
+- Microservices Architecture (https://microservices.io/)
 - Event-Driven Architecture
 - Service-Oriented Architecture (SOA)
 - Model-View-Controller (MVC)
