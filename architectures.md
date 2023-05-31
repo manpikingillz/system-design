@@ -1,6 +1,55 @@
 
 Difference between Low Level Design (LLD) and High Level Design (HLD)
 
+# Introduction
+- It’s all too common for developers to start coding an application
+without a formal architecture in place
+- This practice usually results
+in ill-defined components, creating what is commonly referred to
+as a big ball of mud.
+- These architectures are generally tightly cou‐pled, brittle, difficult to change, and lack a clear vision or direction.
+- It’s also very difficult to determine the architectural characteristics of applications lacking a well-defined architectural style. 
+- - Does the architecture scale? 
+- - What are the performance characteristics of the
+application? 
+- - How easy is it to change the application or add new features?
+- - How responsive is the architecture?
+
+## Why Architectures?
+- Architecture styles help define the basic characteristics and behavior
+of an application.
+- Some architecture styles naturally lend themselves toward highly scalable systems, whereas other architecture styles naturally lend themselves toward applications that allow develop‐ers to respond quickly to change.
+- Knowing the characteristics, strengths, and weaknesses of each architecture style is necessary to choose the one that meets your specific business needs and goals.
+
+## Difference between Archicture Style and Architecture Pattern
+- An architecture style, describes the macro structure of a system
+- Architecture patterns describe reusable structural building block patterns
+that can be used within each of the architecture styles to solve a par‐
+ticular problem.
+- - Architecture patterns differ from design patterns
+- - - An architecture pattern impacts the structural aspect of a system
+- - - A design pattern impacts how the source code is designed
+- - - Architecture styles can be composed of architecture pat‐
+terns, which in turn can be composed of design patterns. For example, you can use the
+Builder design pattern as a way to implement the CQRS architecture
+pattern, and then use the CQRS pattern as a building block within
+a microservices architecture.
+
+- - - ![image info](./images/architecture-style-hierachy.png)
+
+- - Design patterns and architecture patterns are typically combined to
+form a complete solution
+- - Architecture styles can also be combined when building software solutions to form a complete solution
+
+# Architecture Classification
+### Monolithic Architectures:
+- Monolithic architecture styles are much simpler than distributed ones, and as such are easier to design and implement
+- These single deployment unit applications are fairly inexpensive from an overall cost standpoint
+- Most applications architected using a monolithic architecture style can be developed and deployed much more quickly than distributed
+ones
+### Distributed Architectures: 
+
+
 # Architecture
 The web app architecture of a system describes its major components, their relationships, and how they interact with each other.
 
@@ -9,6 +58,15 @@ The web app architecture of a system describes its major components, their relat
 - Monolothic Architecture (Not scalable, not reliable, with single point of failure.)
 - Webservice Architecture
 - Serverless Architecture (aka Function as a service. Functions are hosted by a thirdpart e.g aws lambda functions, azure functions, firebase cloud functions e.t.c)
+- Hybrid architecture styles are common in the real world because not every architecture style can solve every busi‐ness problem. e.g
+- - Event-driven microservices (events between microservices)
+- - Space-based microservices (processing units implemented as microservices)
+- - Event-driven microkernel architecture (events between the
+core system and remote plug-in components).
+- - Although forming
+hybrids is a common practice, it is vital to understand individ‐
+ual architecture styles and their corresponding strengths and weak‐
+nesses before combining them.
 
 
 # Software Architecture styles
