@@ -47,8 +47,171 @@ form a complete solution
 - These single deployment unit applications are fairly inexpensive from an overall cost standpoint
 - Most applications architected using a monolithic architecture style can be developed and deployed much more quickly than distributed
 ones
-### Distributed Architectures: 
+- While cost and simplicity are the main strong points of a monolithic
+architecture, operational characteristics such as scalability, fault tol‐
+erance, and elasticity are its weak points
+-  A fatal error (such as an
+out of memory condition) in a monolithic architecture causes all
+of the functionality to fail.
+- Mean time to recovery (MTTR) and mean time to start (MTTS) are usually measured in minutes, meaning that once a failure does occur, it takes a long time for the application to start back up.
+- While scalability can sometimes be
+achieved through load balancing multiple instances of the application, the entire application functionality must scale, even if only a
+small portion of the overall application needs to scale. This is not
+only inefficient, but unnecessarily costly as well
 
+### Examples of Monolithic Architectures
+- Layered Architecture
+- The modular monolith
+- The pipeline architecture
+- The microkernel architecture
+
+
+### Distributed Architectures:
+Distributed architectures consist of multiple deployment units that work together to perform some sort of cohesive business function
+
+- Most distributed architectures consist of services, although each distributed architecture style has its own unique formal name for a service
+- The superpowers of distributed architectures usually fall within
+operational characteristics—things like scalability, elasticity, fault
+tolerance, and in some cases, performance.
+- Scalability in these
+architecture styles is typically at the individual service level, as is
+elasticity. Hence, MTTS and MTTR are much smaller than with a
+monolithic application, measured usually in seconds (and in some
+cases milliseconds) rather than minutes.
+- Distributed architectures are well suited for supporting high levels
+of fault tolerance. If one service fails, in many cases other services
+can continue to service requests as if no fault happened.
+- Services that do fail can recover very quickly—so quickly that at times an end user sometimes doesn’t even know the service had a fatal error.
+- Agility (the ability to respond quickly to change) is often another
+superpower of distributed architectures. Because application func‐
+tionality is divided into separately deployed units of software, it is
+easier to locate and apply a change, the testing scope is reduced
+to only the service that is impacted, and deployment risk is sig‐
+nificantly reduced because only the service impacted is typically
+deployed.
+
+### Cons
+- Distributed architectures are plagued with what are known
+as the fallacies of distributed computing, a set of eight things we
+believe to be true about networks and distributed computing, but
+are in fact false
+- Things like “the network is reliable,” “bandwidth is
+infinite,” and “latency is zero” all make distributed architectures not
+only hard to keep deterministic, but also hard to make completely
+reliable. Networks do fail, bandwidth is not infinite, and latency is
+not zero
+- In addition to the eight fallacies of distributed computing, other
+difficulties arise with distributed architectures. 
+- - Distributed transac‐
+tions, eventual consistency, workflow management, error handling,
+data synchronization, contract management, and a host of other
+complexities are all part of the world of distributed architecture
+- - To top it off, all this complexity usually means much more cost from an overall initial implementation and ongoing maintenance cost than
+monolithic architectures.
+- - Suddenly, all of those great superpowers
+don’t sound so great anymore when you consider all the trade-offs of
+distributed architectures.
+
+## Examples of Distributed Architectures
+- Microservices architecture
+- Event-driven architecture
+- Service-based architecture
+- Service-oriented architecture
+- Space-based architecture
+
+
+## Monolithic or Distributed? How do you choose?
+- When choosing between a monolithic versus a distributed architecture, one question to first ask yourself is if the system you are
+creating has different sets of architecture characteristics that must
+be supported
+- Does the entire system need to scale
+and support high availability, or only parts of the system?
+- Systems that contain multiple sets of different architecture characteristics generally call for a distributed architecture
+- - A good example of this is customer-facing functionality requiring support for scalability, responsiveness, availability, and agility, and an administrative or backend processing functionality that doesn’t need any of those characteristics.
+- - Simple systems or websites usually warrant the simpler and more
+cost-effective monolithic architecture style, whereas more complex
+systems that perform multiple business functions usually warrant
+more complex distributed architectures.
+- - Similarly, the “need for
+speed,” the need for high volumes of scalability, and the need
+for high fault tolerance are all characteristics that lend themselves
+toward distributed architectures.
+
+# Architecture Partitioning
+Besides being classified as either monolithic or distributed, architectures can also be classified by the way the overall structure of the system is partitioned
+
+Architectures, whether they are monolithic
+or distributed, can be;
+- - Technically partitioned
+- - Domain partitioned.
+
+## Technical Partitioning
+Technically partitioned architectures have the components of the
+system organized by technical usage
+
+- Example of a technically partitioned architecture is the layered (n-tiered) architecture style. In this architecture style, components are
+organized by technical layers; for example, presentation components
+that have to do with the user interface, business layer components
+that have to do with business rules and core processing, persistence
+layer components that interact with the database, and the database
+layer containing the data for the system
+- The components of any given domain are
+spread across all of these technical layers
+- Technically partitioned architectures are useful if a majority of your
+changes are isolated to a specific technical area in the application.
+- - For example, if you are constantly changing the look and feel of
+your user interface without changing the corresponding business
+rules, change is isolated to only one part of the architecture (in
+this case, the presentation layer).
+- - Similarly, if your business rules are constantly changing but there is no impact to the data layer or presentation layer, changes are isolated to the business layer of the architecture with no impact to other parts of the system.
+- The components of any given domain are
+spread across all of these technical layers. For example, the customer
+domain functionality resides in the presentation layer as customer
+screens, the business layer as customer logic, the presentation layer
+as customer queries, and the database layer as customer tables
+- Manifested as namespaces, these components would be organized
+as follows: app.presentation.customer, app.business.customer,
+app.persistence.customer, and so on. Notice how the second
+node in the namespace specifies the technical layering, and that the
+customer node is spread across those layers
+
+- ![technicall partioned](./images/technically-partitioned.png)
+
+## Examples of Technically Partitioned Architectures
+- The layered architecture
+- The microkernel architecture
+- The pipeline architecture
+- The event-driven architecture
+- The space-based architecture
+
+- The Microkernel architecture is
+particularly interesting in that it’s the only architecture style that can
+be either technically partitioned or domain partitioned depending
+on how the plug-in components are used. For example, when the
+plug-in components are used as adapters or special configuration
+settings, it would be considered technically partitioned
+
+## Domain Partitioning
+Components in domain partitioned architectures are organized by domain areas, not technical usage
+
+This means that all of the functionality (presentation,
+business logic, and persistence logic) is grouped together for each
+domain and subdomain area in separate areas of the application
+
+- For
+domain partitioned architectures, components might be manifested
+through a namespace structure such as app.customer, app.ship
+ping, app.payment, and so on. Notice that the second node rep‐
+resents the domain rather than a technical layer.
+- As a matter of
+fact, domains can be further organized into technical layering if so
+desired, which might take the form app.customer.presentation,
+app.customer.business, and so on. Notice that even though the
+customer domain logic may be organized by technical usage, the
+primary structure (represented as the second node of the name‐
+space) is still partitioned by domain. 
+
+- - ![technicall partioned](./images/domain-partitioned.png)
 
 # Architecture
 The web app architecture of a system describes its major components, their relationships, and how they interact with each other.
@@ -67,7 +230,6 @@ core system and remote plug-in components).
 hybrids is a common practice, it is vital to understand individ‐
 ual architecture styles and their corresponding strengths and weak‐
 nesses before combining them.
-
 
 # Software Architecture styles
 - Data-centered architectures
