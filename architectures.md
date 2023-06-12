@@ -209,9 +209,60 @@ desired, which might take the form app.customer.presentation,
 app.customer.business, and so on. Notice that even though the
 customer domain logic may be organized by technical usage, the
 primary structure (represented as the second node of the name‐
-space) is still partitioned by domain. 
+space) is still partitioned by domain.
+- Domain partitioned architectures have grown in popularity over
+the years in part due to the increased use and acceptance of domain-
+driven design, a software modeling and analysis technique coined
+by Eric Evans. Domain-driven design places an emphasis on the
+design of a domain rather than on complex workflows and technical
+components. This approach allows teams to collaborate closely with
+domain experts and focus on one key part of the system, thus devel‐
+oping software that closely resembles that domain functionality 
 
 - - ![technicall partioned](./images/domain-partitioned.png)
+
+## Pros
+- The clear advantage of domain partitioning within an architecture is that changes to a particular domain or subdomain are self-contained within a specific area of the system, allowing teams to pinpoint exactly the area of the system that requires the change
+
+## Do I choose Technically partioned or Domain partitioned?
+- The overall
+structure of the architecture must be aligned not only with the team
+structure, but also with the nature of the types of changes expected
+in the system in order to be successful and effective.
+
+- Technically partitioned architectures (whether monolithic or dis‐
+tributed) are well suited when your overall team structure is organ‐
+ized by those same technical usage areas.
+- - For example, if your
+development teams are organized as teams of user interface devel‐
+opers, backend developers, and database developers, technically
+partitioned architectures would be a good fit because the team struc‐
+ture matches the technical layers of the architecture.
+- Technically
+partitioned architectures are also a natural fit when most of your
+expected changes are aligned with technical layers (for example,
+multiple user interfaces, changes to the look and feel of the system,
+swapping out one database for another, and so on).
+
+- If you are embarking on a new system and using a domain-driven
+design approach, then you should in turn consider a domain par‐
+titioned architecture. 
+- Also, domain partitioned architectures are a
+great fit if your teams are organized into cross-functional teams with
+specialization—in other words, single teams that are aligned with
+specific domain functionality and contain user interface developers,
+backend developers, and database developers all on the same physi‐
+cal team.
+- Domain partitioned architectures are also a good choice when you
+expect most of your changes to be domain scoped rather than tech‐
+nical usage scoped.
+- This allows for much better agility (the ability
+to respond quickly to change) than with technically partitioned
+architectures. However, be careful when choosing a domain parti‐
+tioned architecture if you have lots of changes to technical usage
+layers. For example, swapping out one database type for another or
+changing the entire user interface framework would be a difficult
+and time-consuming task in a domain partitioned architecture.
 
 # Architecture
 The web app architecture of a system describes its major components, their relationships, and how they interact with each other.
